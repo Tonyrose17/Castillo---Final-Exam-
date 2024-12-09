@@ -1,0 +1,29 @@
+from abc import ABC, abstractmethod
+
+# Abstract base class
+class Animal(ABC):
+    @abstractmethod
+    def makeSound(self):
+        pass
+
+# Subclass Dog
+class Dog(Animal):
+    def makeSound(self):
+        return "Woof!"
+
+# Subclass Cat
+class Cat(Animal):
+    def makeSound(self):
+        return "Meow!"
+
+# Demonstrating polymorphism
+def demonstrate_polymorphism(animal: Animal):
+    print(animal.makeSound())
+
+# Create instances of Dog and Cat
+dog = Dog()
+cat = Cat()
+
+# Call makeSound on each instance
+demonstrate_polymorphism(dog)  # Output: Woof!
+demonstrate_polymorphism(cat)   # Output: Meow!
