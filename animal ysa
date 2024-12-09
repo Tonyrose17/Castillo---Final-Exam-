@@ -9,15 +9,18 @@ class Animal(ABC):
 
 class Dog(Animal):
     def makeSound(self):
+ # Returns the sound a dog makes
         return "Woof!"
 
-
+# Define a subclass of Animal called Dog
 class Cat(Animal):
     def makeSound(self):
         return "Meow!"
 
 
 def demonstrate_polymorphism(animal: Animal):
+# Calls the makeSound method of the passed object
+# The specific implementation depends on the type of object (Dog or Cat)
     print(animal.makeSound())
 
 
